@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Figtree";
+    --font-mono: "IBM Plex Mono";
+
+    /* Accent (blue) */
+    --color-paradise-100: #E8E3E3;
+    --color-paradise-200: #B8C5D4;
+    --color-paradise-300: #8DA3B9;
+    --color-paradise-400: #7B93AA;
+    --color-paradise-500: #6A8299;
+    --color-paradise-600: #5A7088;
+    --color-paradise-700: #4A5E72;
+    --color-paradise-800: #2A3A48;
+    --color-paradise-900: #1E2A35;
+
+    /* Other colors */
+    --color-paradise-fg: #E8E3E3;
+    --color-paradise-bg: #151515;
+    --color-paradise-red: #B66467;
+    --color-paradise-green: #8C977D;
+    --color-paradise-yellow: #D9BC8C;
+    --color-paradise-blue: #8DA3B9;
+    --color-paradise-magenta: #A988B0;
+    --color-paradise-cyan: #8AA6A2;
+}
+
+/* --- Base --- */
+html {
+    @apply bg-paradise-bg text-paradise-fg -z-50;
+}
+
+/* --- Keyframes --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageIn {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInStaggered {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Animations --- */
+.animate-page-in {
+    animation: pageIn 0.35s ease-out both;
+}
+
+.animate-page-in > :where(*) {
+    animation: fadeIn 0.35s ease-out both;
+}
+
+.animate-stagger-in {
+    animation: fadeInUp 0.4s ease-out both;
+}

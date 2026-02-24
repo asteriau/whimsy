@@ -1,9 +1,9 @@
-# Whimsy ✨
+# whimsy
 
-A minimal yet elegant and hackable start page for your browser, designed on a whim.
+A very stupid little startpage/newtab for your browser i made on a whim
 
 ## Preview
 
-![Preview](https://i.imgur.com/SRLccNC.png)
+![Preview](https://i.imgur.com/SBzftMX.jpeg)
 
-[Live Preview](https://whimsy-ruby.vercel.app)
+[Live Preview](https://whimsy.asteria.cat)
